@@ -59,7 +59,7 @@ Spin up a replica set server:
 var mongoServer strikememongo.Server;
 
 func TestMain(m *testing.M) {
-  mongoServer, err = strikememongo.StartWitOptions(&strikememongo.Options{MongoVersion: "4.2.1", ShouldUseReplica: true})
+  mongoServer, err = strikememongo.StartWithOptions(&strikememongo.Options{MongoVersion: "4.2.1", ShouldUseReplica: true})
   if (err != nil) {
     log.Fatal(err)
   }
